@@ -1,3 +1,4 @@
+#!/bin/sh
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 
 if [ "$BRANCH_NAME" = "main" ] || [ "$BRANCH_NAME" = "develop" ]; then

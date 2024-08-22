@@ -8,7 +8,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="w-full flex flex-col-reverse items-center">
+    <div className="w-full flex flex-col-reverse items-center px-4 lg:px-0">
       <Gallery />
       <div className="flex flex-col items-center py-12">
         <motion.h1
@@ -16,9 +16,10 @@ function Hero({}: Props) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
           animate={{ opacity: 1 }}
-          className="text-4xl font-bold font-syne text-center  leading-tight"
+          className="lg:text-4xl text-2xl font-bold font-syne text-center  leading-tight"
         >
-          Revolutionizing loyalty programs with <br /> seamless rewards
+          Revolutionizing loyalty programs with{" "}
+          <br className="hidden lg:block" /> seamless rewards
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}

@@ -1,9 +1,11 @@
-import BrandsGallery from "@/components/brands-gallery";
+import Hero from "@/components/landing-page/hero";
+import JoinUs from "@/components/landing-page/join-us";
 
 export default function Home() {
   return (
-    <main>
-      <BrandsGallery />
+    <main className="flex min-h-screen flex-col items-center justify-between ">
+      <Hero />
+      <JoinUs />
     </main>
   );
 }

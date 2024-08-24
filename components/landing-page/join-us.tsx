@@ -13,19 +13,17 @@ function JoinUs({}: Props) {
       <div className="flex  flex-col-reverse  lg:flex-row w-full px-8 lg:px-0 h-full">
         <div className="flex  w-full mt-12 lg:mt-0 lg:pl-32 text-black gap-8 lg:pt-28 flex-col">
           <motion.h1
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            animate={{ opacity: 1 }}
-            className="font-syne font-semibold text-3xl lg:text-4xl"
+            variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
+            className="font-semibold text-3xl lg:text-4xl"
           >
             GET EXCLUSIVE ACCESS <br /> TO OUR LAUNCH EVENT
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            animate={{ opacity: 1 }}
+            variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
             className="text-sm max-w-md leading-normal tracking-wider"
           >
             Be part of an exclusive unveiling of our groundbreaking loyalty

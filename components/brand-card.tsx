@@ -5,6 +5,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ConvertDialog } from "./convert-dialog";
 
 interface BrandCardProps {
   brandName: string;
@@ -25,21 +35,25 @@ const BrandCard: React.FC<BrandCardProps> = ({
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const toggleFlip = () => {
+  const toggleFlip = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
     setIsFlipped(!isFlipped);
   };
 
   return (
     <div className="relative w-full h-48 perspective-1000">
       <motion.div
-        className="w-full h-full transition-all duration-500 preserve-3d cursor-pointer"
+        className="w-full h-full preserve-3d  cursor-pointer"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
-        onClick={toggleFlip}
+        transition={{ duration: 0.2, delay: 0, ease: "easeInOut" }}
       >
-        <Card className="absolute w-full h-full backface-hidden bg-foreground rounded-lg overflow-hidden">
+        <Card
+          onClick={toggleFlip}
+          className="absolute w-full h-full backface-hidden bg-foreground rounded-lg overflow-hidden"
+        >
           <CardContent className="h-full p-0">
             <div className="flex h-full">
-              <div className="bg-gray-200 w-2/3 flex justify-center items-center">
+              <div className="bg-gray-200 hover:bg-gray-100 duration-200 w-2/3 flex justify-center items-center">
                 <div>
                   <Image src={logo} alt={brandName} width={100} height={100} />
                   <p className="text-muted mt-4 text-sm">
@@ -55,7 +69,10 @@ const BrandCard: React.FC<BrandCardProps> = ({
           </CardContent>
         </Card>
 
-        <Card className="absolute w-full h-full backface-hidden rotate-y-180 bg-yellow-400 text-background">
+        <Card
+          onClick={(e) => toggleFlip(e)}
+          className="absolute w-full h-full backface-hidden rotate-y-180 bg-yellow-400 text-background"
+        >
           <CardContent className="h-full p-4 flex flex-col justify-between">
             <div>
               <h3 className="text-lg font-bold mb-2">{brandName}</h3>
@@ -69,7 +86,23 @@ const BrandCard: React.FC<BrandCardProps> = ({
 
             <div className="flex gap-4">
               <Button variant={"default"}>Redeem</Button>
-              <Button variant={"secondary"}>Convert</Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant={"secondary"}>Convert</Button>
+                </DialogTrigger>
+                <DialogContent className="w-screen max-w-fit">
+                  <ConvertDialog
+                    data={{
+                      brandName,
+                      brandColor,
+                      logo,
+                      points,
+                      description,
+                      expiry,
+                    }}
+                  />
+                </DialogContent>
+              </Dialog>
             </div>
           </CardContent>
         </Card>

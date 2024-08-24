@@ -1,4 +1,5 @@
 import BrandCard from "@/components/brand-card";
+import OptionList from "./option-list";
 
 const RewardDashboard: React.FC = () => {
   const brands = [
@@ -70,9 +71,9 @@ const RewardDashboard: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl mb-4">Your Reward Dashboard</h1>
-      <p className="text-xl mb-6">200 pts</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <h1 className="text-2xl font-semibold ">Your Reward Dashboard</h1>
+      <p className="text-xl mb-6 text-yellow-400">200 pts</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2  mt-8 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {brands.map((brand, index) => (
           <BrandCard key={index} {...brand} />
         ))}

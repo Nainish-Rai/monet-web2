@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -19,7 +20,8 @@ export default function RootLayout({
     <html lang="en" className="dark ">
       <body className={syne.className}>
         <Navbar />
-        {children}
+        <div className="min-h-screen">{children}</div>
+        <Footer />
       </body>
     </html>
   );

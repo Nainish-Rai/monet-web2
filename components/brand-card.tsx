@@ -3,9 +3,11 @@
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface BrandCardProps {
-  brand: string;
+  brandName: string;
+  brandColor: string;
   logo: string;
   points: number;
   description?: string;
@@ -13,7 +15,8 @@ interface BrandCardProps {
 }
 
 const BrandCard: React.FC<BrandCardProps> = ({
-  brand,
+  brandName,
+  brandColor,
   logo,
   points,
   description,
@@ -27,44 +30,23 @@ const BrandCard: React.FC<BrandCardProps> = ({
 
   return (
     <Card
-      className="relative w-full h-48 transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+      className="relative w-full h-48 transition-all duration-300 transform hover:scale-105 cursor-pointer group rounded-lg overflow-hidden bg-foreground cursor-pointer"
       onClick={toggleFlip}
     >
-      <CardContent className="p-4 h-full flex flex-col justify-between">
-        <div className="flex justify-between items-start">
-          <img src={logo} alt={brand} className="w-16 h-16 object-contain" />
-          <span className="text-xl font-bold">{points} Points</span>
-        </div>
-        <div className="mt-2">
-          <h3 className="text-lg font-semibold">{brand}</h3>
-          {description && (
-            <p className="text-sm text-gray-500">{description}</p>
-          )}
-          {expiry && (
-            <p className="text-xs text-gray-400 mt-1">Expiry: {expiry}</p>
-          )}
-        </div>
-        <div className="flex justify-between mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:opacity-100">
-          <Button variant="outline" size="sm">
-            REDEEM
-          </Button>
-          <Button variant="outline" size="sm">
-            CONVERT
-          </Button>
+      <CardContent className="h-full p-0">
+        <div className="flex h-full">
+          <div className="bg-gray-200 w-2/3 flex justify-center items-center">
+            <div>
+              <Image src={logo} alt={brandName} width={100} height={100} />
+              <p className="text-muted mt-4 text-sm">View Details</p>
+            </div>
+          </div>
+          <div className="text-muted flex flex-col justify-center items-center w-1/3">
+            <span className="font-bold">{points}</span>
+            <span className="text-muted-foreground">Points</span>
+          </div>
         </div>
       </CardContent>
-      <div className="absolute inset-0 bg-white p-4 flex flex-col justify-center items-center transform md:group-hover:rotate-y-180 backface-hidden transition-all duration-300 md:opacity-0 md:group-hover:opacity-100">
-        <h3 className="text-lg font-semibold mb-2">{brand}</h3>
-        <p className="text-sm text-center mb-4">{description}</p>
-        <div className="flex space-x-2">
-          <Button variant="outline" size="sm">
-            REDEEM
-          </Button>
-          <Button variant="outline" size="sm">
-            CONVERT
-          </Button>
-        </div>
-      </div>
     </Card>
   );
 };

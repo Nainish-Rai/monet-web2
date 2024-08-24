@@ -3,25 +3,74 @@ import BrandCard from "@/components/brand-card";
 const RewardDashboard: React.FC = () => {
   const brands = [
     {
-      brand: "H&M",
-      logo: "/hm-logo.png",
-      points: 25,
-      description:
-        "Lorem ipsum has been the industry's standard dummy text ever since the 1500s.",
-      expiry: "02/02/2060",
+      brandName: "Starbucks",
+      brandColor: "bg-red-500",
+      logo: "/images/starbucks-logo.svg",
+      points: 100,
+      description: "Get 20% off on all products",
+      expiry: "31 Dec 2021",
     },
-    { brand: "cult.fit", logo: "/cultfit-logo.png", points: 25 },
-    { brand: "WESTSIDE", logo: "/westside-logo.png", points: 25 },
-    { brand: "Lenskart", logo: "/lenskart-logo.png", points: 25 },
-    { brand: "Uber", logo: "/uber-logo.png", points: 25 },
-    { brand: "Ola Airdrop Vault", logo: "/ola-logo.png", points: 25 },
-    { brand: "Starbucks", logo: "/starbucks-logo.png", points: 25 },
-    { brand: "ARABICA", logo: "/arabica-logo.png", points: 25 },
+    {
+      brandName: "Amazon",
+      brandColor: "bg-blue-500",
+      logo: "/images/amazon-logo.svg",
+      points: 50,
+      description: "Get 10% off on all products",
+      expiry: "31 Dec 2021",
+    },
+    {
+      brandName: "Coca Cola",
+      brandColor: "bg-yellow-500",
+      logo: "/images/coca-cola-logo.svg",
+      points: 25,
+      description: "Get 5% off on all products",
+      expiry: "31 Dec 2021",
+    },
+    {
+      brandName: "Heineken",
+      brandColor: "bg-green-500",
+      logo: "/images/heineken-logo.svg",
+      points: 10,
+      description: "Get 2% off on all products",
+      expiry: "31 Dec 2021",
+    },
+    {
+      brandName: "Levis",
+      brandColor: "bg-blue-500",
+      logo: "/images/levis-logo.svg",
+      points: 150,
+      description: "Get 30% off on all products",
+      expiry: "31 Dec 2021",
+    },
+    {
+      brandName: "Mastercard",
+      brandColor: "bg-red-500",
+      logo: "/images/mastercard-logo.svg",
+      points: 75,
+      description: "Get 15% off on all products",
+      expiry: "31 Dec 2021",
+    },
+    {
+      brandName: "McDonalds",
+      brandColor: "bg-red-500",
+      logo: "/images/mcdonalds-logo.svg",
+      points: 200,
+      description: "Get 40% off on all products",
+      expiry: "31 Dec 2021",
+    },
+    {
+      brandName: "Redbull",
+      brandColor: "bg-blue-500",
+      logo: "/images/redbull-logo.svg",
+      points: 5,
+      description: "Get 1% off on all products",
+      expiry: "31 Dec 2021",
+    },
   ];
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-4">Your Reward Dashboard</h1>
+      <h1 className="text-2xl mb-4">Your Reward Dashboard</h1>
       <p className="text-xl mb-6">200 pts</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {brands.map((brand, index) => (

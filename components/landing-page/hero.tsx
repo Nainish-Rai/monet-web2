@@ -3,6 +3,7 @@ import React from "react";
 import Gallery from "./gallery";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {};
 
@@ -27,7 +28,9 @@ function Hero({}: Props) {
           transition={{ duration: 1.2, delay: 0.7 }}
           animate={{ opacity: 1 }}
         >
-          <Button className="mt-4 p-5 bg-yellow-400">Get Started</Button>
+          <Link href={"/dashboard"}>
+            <Button className="mt-4 p-5 bg-yellow-400">Get Started</Button>
+          </Link>
         </motion.div>
       </div>
     </div>

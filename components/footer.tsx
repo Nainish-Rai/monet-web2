@@ -1,52 +1,57 @@
-import { FacebookIcon, Linkedin, Twitter } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { Facebook, Twitter, Linkedin } from "lucide-react";
 
-type Props = {};
-
-function Footer({}: Props) {
+const Footer = () => {
   return (
-    <footer className="w-full bg-[#F7CD46] border lg:text-xs  text-sm font-medium text-black">
-      <div className="flex flex-col lg:flex-row justify-between max-w-6xl py-3 mx-auto px-6 lg:px-0 gap-4 lg:gap-0 lg:items-center">
-        <ul className="flex gap-2">
-          <li>
-            <Link
-              className="hover:underline hover:opacity-80"
-              href="/terms-and-conditions"
-            >
-              Terms & Conditions
-            </Link>
-          </li>
-          <div>|</div>
-          <li>
-            <Link
-              className="hover:underline hover:opacity-80"
-              href="/privacy-policy"
-            >
-              Privacy Policy
-            </Link>
-          </li>
-        </ul>
-        <div className="flex gap-2">
-          <div className="flex gap-4">
-            <Link href="/">
-              <FacebookIcon className="h-6 w-6 border-2 rounded p-0.5 " />
-            </Link>
-            <Link href="/">
-              <Twitter className="h-6 w-6 border-2 rounded p-0.5" />
-            </Link>
-            <Link href="/">
-              <Linkedin className="h-6 w-6 border-2 rounded p-0.5" />
-            </Link>
-          </div>
+    <footer className="w-full bg-black text-gray-400 py-4 px-6">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex space-x-4 mb-4 sm:mb-0">
+          <Link
+            href="/terms"
+            className="text-sm hover:text-white transition-colors"
+          >
+            Terms & Conditions
+          </Link>
+          <Link
+            href="/privacy"
+            className="text-sm hover:text-white transition-colors"
+          >
+            Privacy Policy
+          </Link>
         </div>
-        <div>
-          <p>{`© ${new Date().getFullYear()} Monet. All rights reserved.`}</p>
+        <div className="flex space-x-4 mb-4 sm:mb-0">
+          <Link
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook className="w-5 h-5 hover:text-white transition-colors" />
+          </Link>
+          <Link
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <Twitter className="w-5 h-5 hover:text-white transition-colors" />
+          </Link>
+          <Link
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-5 h-5 hover:text-white transition-colors" />
+          </Link>
+        </div>
+        <div className="text-sm">
+          © {new Date().getFullYear()} Monet. All rights reserved.
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

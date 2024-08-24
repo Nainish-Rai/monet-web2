@@ -54,11 +54,11 @@ function Navbar({}: Props) {
     },
   ];
   return (
-    <nav className="w-full mx-auto py-4 ">
+    <nav className="w-full mx-auto py-4">
       <div className="flex items-center justify-between mx-auto max-w-7xl px-4 lg:px-0 ">
-        <div>
+        <Link href={"/"}>
           <MonetWorkLogo className="w-28" />
-        </div>
+        </Link>
         <div className="hidden lg:block">
           <NavigationMenuLinks />
         </div>

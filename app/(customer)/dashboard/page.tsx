@@ -1,3 +1,5 @@
+"use client";
+
 import RewardDashboard from "@/components/rewards-dashboard";
 
 const CustomerDashboard = () => {

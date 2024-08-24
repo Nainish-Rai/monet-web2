@@ -1,0 +1,81 @@
+"use client";
+
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+interface BrandCardProps {
+  brandName: string;
+  brandColor: string;
+  logo: string;
+  points: number;
+  description?: string;
+  expiry?: string;
+}
+
+const BrandCard: React.FC<BrandCardProps> = ({
+  brandName,
+  brandColor,
+  logo,
+  points,
+  description,
+  expiry,
+}) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const toggleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  return (
+    <div className="relative w-full h-48 perspective-1000">
+      <motion.div
+        className="w-full h-full transition-all duration-500 preserve-3d cursor-pointer"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        onClick={toggleFlip}
+      >
+        <Card className="absolute w-full h-full backface-hidden bg-foreground rounded-lg overflow-hidden">
+          <CardContent className="h-full p-0">
+            <div className="flex h-full">
+              <div className="bg-gray-200 w-2/3 flex justify-center items-center">
+                <div>
+                  <Image src={logo} alt={brandName} width={100} height={100} />
+                  <p className="text-muted mt-4 text-sm">
+                    Click to view details
+                  </p>
+                </div>
+              </div>
+              <div className="text-muted flex flex-col justify-center items-center w-1/3">
+                <span className="font-bold">{points}</span>
+                <span className="text-muted">Points</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="absolute w-full h-full backface-hidden rotate-y-180 bg-yellow-400 text-background">
+          <CardContent className="h-full p-4 flex flex-col justify-between">
+            <div>
+              <h3 className="text-lg font-bold mb-2">{brandName}</h3>
+              <p className="text-sm mb-2">{description}</p>
+              {expiry && (
+                <p className="text-sm">
+                  <strong>Expiry:</strong> {expiry}
+                </p>
+              )}
+            </div>
+
+            <div className="flex gap-4">
+              <Button variant={"default"}>Redeem</Button>
+              <Button variant={"secondary"}>Convert</Button>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
+    </div>
+  );
+};
+
+export default BrandCard;

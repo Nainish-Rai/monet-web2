@@ -6,13 +6,14 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black text-gray-400 py-4 px-6">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-        <div className="flex space-x-4 mb-4 sm:mb-0">
+        <div className="flex space-x-4 items-center mb-4 sm:mb-0">
           <Link
             href="/terms"
             className="text-sm hover:text-white transition-colors"
           >
             Terms & Conditions
           </Link>
+          <div>|</div>
           <Link
             href="/privacy"
             className="text-sm hover:text-white transition-colors"

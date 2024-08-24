@@ -16,7 +16,7 @@ function JoinUs({}: Props) {
             variants={textVariant(0.2)}
             initial="hidden"
             whileInView="show"
-            className="font-syne font-semibold text-3xl lg:text-4xl"
+            className="font-semibold text-3xl lg:text-4xl"
           >
             GET EXCLUSIVE ACCESS <br /> TO OUR LAUNCH EVENT
           </motion.h1>

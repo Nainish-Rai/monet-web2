@@ -37,7 +37,7 @@ export default function TabsPage() {
   ];
 
   return (
-    <Tabs value={currentTab} onValueChange={handleTabChange} className=" mt-4">
+    <Tabs value={currentTab} onValueChange={handleTabChange} className="mt-4">
       <TabsList>
         {brandDashboardMenuItems.map((item) => (
           <Link key={item.value} href={item.link} passHref legacyBehavior>

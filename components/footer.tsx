@@ -4,7 +4,7 @@ import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-gray-400 py-4 px-6">
+    <footer className="w-full bg-black text-gray-400 py-4">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
         <div className="flex space-x-4 items-center mb-4 sm:mb-0">
           <Link

@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import BrandOverview from "@/components/brand-dashboard/brand-overview";
+import BrandTransactions from "@/components/brand-dashboard/brand-transactions";
 
 export default function TabsPage() {
   const pathname = usePathname();
@@ -32,6 +33,12 @@ export default function TabsPage() {
       name: "Transactions",
       value: "transactions",
       link: "/brand/dashboard/transactions",
+      content: <BrandTransactions />,
+    },
+    {
+      name: "Analytics",
+      value: "analytics",
+      link: "/brand/dashboard/analytics",
       content: <BrandOverview />,
     },
   ];

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import BrandOverview from "@/components/brand-dashboard/brand-overview";
 import BrandTransactions from "@/components/brand-dashboard/brand-transactions";
+import ComingSoon from "@/components/brand-dashboard/coming-soon";
 
 export default function TabsPage() {
   const pathname = usePathname();
@@ -39,7 +40,7 @@ export default function TabsPage() {
       name: "Analytics",
       value: "analytics",
       link: "/brand/dashboard/analytics",
-      content: <BrandOverview />,
+      content: <ComingSoon />,
     },
   ];
 

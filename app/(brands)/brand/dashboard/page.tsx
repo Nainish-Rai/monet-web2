@@ -1,13 +1,6 @@
-"use client";
-
-import BrandOverview from "@/components/brand-overview";
+import { redirect } from "next/navigation";
 
 const BrandDashboard = () => {
-  return (
-    <main className="container px-4">
-      <BrandOverview />
-    </main>
-  );
+  redirect("/brand/dashboard/overview");
 };
-
 export default BrandDashboard;

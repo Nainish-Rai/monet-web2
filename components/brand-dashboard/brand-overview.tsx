@@ -1,8 +1,8 @@
 import React from "react";
-import StatCard from "./stats-card";
-import { BarChartComponent } from "./bar-chart";
-import { PieChartComponent } from "./pie-chart";
-import RecommendationCard from "./recommendation-card";
+import StatCard from "../stats-card";
+import { BarChartComponent } from "../bar-chart";
+import { PieChartComponent } from "../pie-chart";
+import RecommendationCard from "../recommendation-card";
 
 type Props = {};
 

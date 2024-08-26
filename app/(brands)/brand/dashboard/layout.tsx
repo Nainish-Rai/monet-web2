@@ -7,7 +7,7 @@ export default function DashboardLayout({
 }) {
   return (
     <section>
-      <div className="container mx-auto pl-10">
+      <div className="container mx-auto px-4">
         <h1 className="text-2xl font-semibold ">Dashboard</h1>
         <div className="flex space-x-2 mt-4">
           <Link

@@ -6,6 +6,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import BrandOverview from "@/components/brand-dashboard/brand-overview";
 import BrandTransactions from "@/components/brand-dashboard/brand-transactions";
 import ComingSoon from "@/components/brand-dashboard/coming-soon";
+import BrandHome from "@/components/brand-dashboard/brand-home";
 
 export default function TabsPage() {
   const pathname = usePathname();
@@ -22,7 +23,7 @@ export default function TabsPage() {
       name: "Home",
       value: "home",
       link: "/brand/dashboard/home",
-      content: <BrandOverview />,
+      content: <BrandHome />,
     },
     {
       name: "Overview",

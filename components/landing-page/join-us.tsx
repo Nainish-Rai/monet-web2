@@ -55,7 +55,7 @@ function JoinUs({}: Props) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-secondary font-syne">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-24 lg:gap-32 mt-16 text-secondary font-syne">
           <div className="">
             <UserIcon size={48} className="mb-4" />
             <h2 className="text-2xl font-bold mb-2 font-syne">For Users:</h2>

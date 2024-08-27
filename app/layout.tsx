@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const syne = Syne({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
+const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Monet Web 2.0",

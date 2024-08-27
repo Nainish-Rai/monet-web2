@@ -87,8 +87,8 @@ export default function BrandTransactionDetails({
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>No. of points traded in</TableHead>
-                    <TableHead>No. of points traded from</TableHead>
+                    <TableHead>Points traded in</TableHead>
+                    <TableHead>Points traded from</TableHead>
                     <TableHead>Transaction date</TableHead>
                     <TableHead>Transaction Hash</TableHead>
                     <TableHead>Transaction fee</TableHead>

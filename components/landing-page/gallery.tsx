@@ -9,9 +9,14 @@ const Gallery = () => {
       variants={textVariant(0.2)}
       initial="hidden"
       whileInView="show"
-      className="relative w-full h-48 lg:h-[450px]  "
+      className="relative w-full h-48 lg:h-[450px]"
     >
-      <Image src="/hero-gallery.png" alt="gallery" fill />
+      <Image
+        src="/hero-gallery.png"
+        alt="gallery"
+        fill
+        className="object-cover"
+      />
     </motion.div>
   );
 };

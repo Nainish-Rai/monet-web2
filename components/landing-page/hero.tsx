@@ -9,7 +9,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="w-full flex flex-col-reverse items-center px-4 lg:px-0">
+    <div className="w-full flex flex-col items-center px-4 lg:px-0">
       <Gallery />
       <div className="flex flex-col items-center py-12">
         <motion.h1

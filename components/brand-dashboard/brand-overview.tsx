@@ -13,12 +13,24 @@ function BrandOverview({}: Props) {
     change: "+180.1%",
     changeText: "from last month",
   };
+  const tradeOutData = {
+    title: "Total Trade-Out Points",
+    value: "1234",
+    change: "+180.1%",
+    changeText: "from last month",
+  };
+  const totalCashbackData = {
+    title: "Total Cashback",
+    value: "Rs. 123749",
+    change: "+19%%",
+    changeText: "from last month",
+  };
   return (
     <div className="w-full mt-6">
       <div className="flex w-full flex-col lg:flex-row flex-wrap  ">
         <StatCard {...tradeInData} />
-        <StatCard {...tradeInData} />
-        <StatCard {...tradeInData} />
+        <StatCard {...tradeOutData} />
+        <StatCard {...totalCashbackData} />
       </div>
       <div className="w-full lg:h-[418px] flex flex-col lg:flex-row  ">
         <div className="w-full lg:w-1/2 p-2  h-full">

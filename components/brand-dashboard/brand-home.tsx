@@ -1,6 +1,8 @@
 import React from "react";
 import { BarChart3, Brain, Coins } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -64,7 +66,10 @@ export default function BrandHome() {
           We are excited to have you on board! Here are some of the features
           that you can explore.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Link href="/brand/dashboard/overview" passHref>
+          <Button variant={"secondary"}>Continue</Button>
+        </Link>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}

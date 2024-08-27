@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ChevronLeft, ChevronRight, Calendar } from "lucide-react";
+import BrandTransactionDetails from "./brand-transaction-details";
 
 // Mock data
 const transactions = [
@@ -104,9 +105,7 @@ export default function BrandTransactions() {
               <TableCell>{transaction.tradeIn}</TableCell>
               <TableCell>{transaction.tradeOut}</TableCell>
               <TableCell className="text-right">
-                <Button variant="ghost" className="mr-2">
-                  View details
-                </Button>
+                <BrandTransactionDetails transaction={transaction} />
                 <Button variant="link" className="text-yellow-500">
                   Download pdf
                 </Button>

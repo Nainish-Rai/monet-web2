@@ -17,7 +17,9 @@ function Hero({}: Props) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
           animate={{ opacity: 1 }}
-          className="lg:text-4xl text-2xl font-bold  text-center  leading-tight"
+          className={
+            "lg:text-4xl text-2xl  font-syne font-bold  text-center  leading-tight"
+          }
         >
           Revolutionizing loyalty programs with{" "}
           <br className="hidden lg:block" /> seamless rewards

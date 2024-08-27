@@ -69,7 +69,7 @@ const OptionList: React.FC<OptionListProps> = ({
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen p-4 bg-gray-100 rounded-lg overflow-hidden">
+    <div className="flex flex-col h-full ro items-center justify-center  p-4 bg-gray-100 rounded-2xl overflow-hidden">
       <div
         ref={listRef}
         onScroll={handleScroll}

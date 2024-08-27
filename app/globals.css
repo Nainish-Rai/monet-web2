@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -83,4 +84,14 @@
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+/* make scrollbar thin and modern rounded */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: var(--radius);
 }

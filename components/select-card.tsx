@@ -29,7 +29,7 @@ const SelectCard = ({ setToPointType }: { setToPointType: Function }) => {
   }, [selectedCard, setToPointType]);
 
   return (
-    <div className="relative w-full h-48 perspective-1000">
+    <div className="relative w-full h-48 hover:opacity-60 duration-200 hover:-translate-y-1 perspective-1000">
       <div className="w-full h-full preserve-3d  border-none cursor-pointer">
         {selectedCard == null ? (
           <Card className="absolute w-full h-full  bg-foreground rounded-lg overflow-hidden">

@@ -5,7 +5,7 @@ export default function DashboardLayout({
 }) {
   return (
     <main className="container">
-      <h2 className="text-2xl">Dashboard</h2>
+      <h2 className="text-2xl font-syne px-2">Dashboard</h2>
       {children}
     </main>
   );

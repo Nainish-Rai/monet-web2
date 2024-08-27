@@ -25,7 +25,7 @@ const ConvertCard: React.FC<BrandCardProps> = ({
   return (
     <div className="relative w-full h-48 perspective-1000">
       <div className="w-full h-full preserve-3d  cursor-pointer">
-        <Card className="absolute w-full h-full backface-hidden bg-foreground rounded-lg overflow-hidden">
+        <Card className="absolute w-full h-full backface-hidden hover:opacity-80 duration-200 hover:-translate-y-1 bg-foreground rounded-lg overflow-hidden">
           <CardContent className="h-full p-0">
             <div className="flex h-full">
               <div className="bg-gray-200 hover:bg-gray-100 duration-200 w-2/3 flex justify-center items-center">

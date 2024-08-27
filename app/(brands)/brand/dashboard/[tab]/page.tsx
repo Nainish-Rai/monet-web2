@@ -47,7 +47,7 @@ export default function TabsPage() {
 
   return (
     <Tabs value={currentTab} onValueChange={handleTabChange} className="mt-4">
-      <TabsList>
+      <TabsList className="mx-2">
         {brandDashboardMenuItems.map((item) => (
           <Link key={item.value} href={item.link} passHref legacyBehavior>
             <TabsTrigger value={item.value}>{item.name}</TabsTrigger>

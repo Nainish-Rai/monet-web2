@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -90,7 +91,8 @@ const BrandCard: React.FC<BrandCardProps> = ({
                 <DialogTrigger asChild>
                   <Button variant={"secondary"}>Convert</Button>
                 </DialogTrigger>
-                <DialogContent className="w-screen max-w-fit">
+
+                <DialogContent className="bg-background/70 sm:rounded-3xl  backdrop-blur w-screen max-w-fit">
                   <ConvertDialog
                     data={{
                       brandName,

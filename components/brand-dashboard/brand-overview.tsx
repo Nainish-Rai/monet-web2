@@ -41,7 +41,7 @@ function BrandOverview({}: Props) {
       </div>
       <div className="mb-8">
         <h1
-          className="text-2xl mt-6 px-2 font-semibold"
+          className="text-2xl mt-6 px-2  font-semibold"
           id="brand-recommendataions"
         >
           Recommendations

@@ -4,7 +4,7 @@ export default function ComingSoon() {
   return (
     <div className="relative w-full min-h-[600px] flex items-center justify-center p-4">
       {/* Dashboard-like background elements */}
-      <div className="absolute inset-0 grid grid-cols-3 gap-4 mt-4 text-gray-500 overflow-hidden">
+      <div className="absolute inset-0 grid grid-cols-3 gap-4 mt-4 text-gray-500 overflow-hidden blur">
         <div className="col-span-3 bg-gray-900 rounded-lg p-4">Marketing</div>
         <div className="bg-gray-900 rounded-lg p-4">Sales</div>
         <div className="bg-gray-900 rounded-lg p-4">Customers</div>

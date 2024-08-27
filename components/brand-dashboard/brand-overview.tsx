@@ -1,4 +1,3 @@
-import React from "react";
 import StatCard from "../stats-card";
 import { BarChartComponent } from "../bar-chart";
 import { PieChartComponent } from "../pie-chart";
@@ -21,7 +20,7 @@ function BrandOverview({}: Props) {
   };
   const totalCashbackData = {
     title: "Total Cashback",
-    value: "Rs. 123749",
+    value: "₹ 123749",
     change: "+19%%",
     changeText: "from last month",
   };
@@ -41,7 +40,12 @@ function BrandOverview({}: Props) {
         </div>
       </div>
       <div className="mb-8">
-        <h1 className="text-2xl mt-6 px-2 font-semibold ">Recommendations</h1>
+        <h1
+          className="text-2xl mt-6 px-2 font-semibold"
+          id="brand-recommendataions"
+        >
+          Recommendations
+        </h1>
         <div className="flex mt-4 flex-col lg:flex-row  flex-wrap">
           <RecommendationCard
             imageUrl="/images/mastercard-logo.svg"

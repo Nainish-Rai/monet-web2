@@ -3,7 +3,7 @@ import OptionList from "./option-list";
 import PortfolioBar from "./portfolio-bar";
 import { StatCardGrid } from "./stat-card-grid";
 import { StarsIcon } from "lucide-react";
-import { RecommendationCard } from "./recommendation-card";
+import DashboardCard from "./dashboard-card";
 
 const RewardDashboard: React.FC = () => {
   const brands = [
@@ -55,7 +55,7 @@ const RewardDashboard: React.FC = () => {
 
       <div className="grid grid-cols-1 max-w-7xl sm:grid-cols-2  mt-8 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {brands.map((brand, index) => (
-          <RecommendationCard
+          <DashboardCard
             key={index}
             imageUrl="/images/recommendation.png"
             brandLogo="/images/starbucks-logo.svg"

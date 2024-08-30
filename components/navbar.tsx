@@ -12,53 +12,27 @@ function Navbar({}: Props) {
   const [menuActive, setMenuActive] = useState(false);
   const navItems = [
     {
-      name: "Learn",
-      link: "/learn",
+      name: "Who we are",
+      link: "#",
       icon: <House className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Tokenomics",
-      link: "/tokenomics",
+      name: "Features",
+      link: "#",
       icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Community",
-      link: "/community",
+      name: "Contact us",
+      link: "#",
       icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Products",
-      newTab: true,
-      link: "https://web3-points.stage.monet.work/",
-      icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
-      isDropdown: true,
-      subMenu: [
-        {
-          name: "Web3 Points (Beta)",
-          url: "https://web3-points.stage.monet.work/",
-        },
-      ],
-    },
-    {
-      name: "About",
-      newTab: true,
-      link: "https://monet-work.github.io/web3-points/",
-      icon: <HouseIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
-      isDropdown: true,
-      subMenu: [
-        {
-          name: "Web3 Points",
-          url: "https://monet-work.github.io/web3-points/",
-        },
-      ],
     },
   ];
   return (
-    <nav className="w-full mx-auto py-4 ">
-      <div className="flex items-center justify-between mx-auto max-w-7xl px-4 lg:px-0 ">
-        <div>
+    <nav className="w-full py-4">
+      <div className="flex items-center justify-between container">
+        <Link href={"/"}>
           <MonetWorkLogo className="w-28" />
-        </div>
+        </Link>
         <div className="hidden lg:block">
           <NavigationMenuLinks />
         </div>
@@ -80,7 +54,7 @@ function Navbar({}: Props) {
               delay: 0,
               duration: 0.5,
             }}
-            className="w-full absolute top-12 h-fit p-8 bg-black/90 rounded  backdrop-blur-md   left-0"
+            className="w-full absolute top-12 h-fit p-8 bg-black/40 z-10 rounded  backdrop-blur-md left-0 font-syne"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -90,15 +64,15 @@ function Navbar({}: Props) {
               className="w-full flex flex-col gap-4"
             >
               <ul className="w-full flex flex-col text-xl  gap-4 items-center">
-                {navItems.map((navItem: any, idx: number) => (
+                {navItems.map((item, idx: number) => (
                   <li
-                    key={`link=${navItem}`}
+                    key={`link=${item.name}`}
                     onClick={() => {
                       setMenuActive(false);
                     }}
                     className=" cursor-pointer hover:text-red-400 themegrad  text-"
                   >
-                    <Link href={navItem.link}>{navItem.name}</Link>
+                    <Link href={item.link}>{item.name}</Link>
                   </li>
                 ))}
               </ul>

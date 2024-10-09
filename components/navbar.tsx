@@ -28,7 +28,7 @@ function Navbar({}: Props) {
     },
   ];
   return (
-    <nav className="w-full py-4">
+    <nav className="w-full fixed top-0 py-4">
       <div className="flex items-center justify-between container">
         <Link href={"/"}>
           <MonetWorkLogo className="w-28" />

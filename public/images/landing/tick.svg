@@ -1,0 +1,13 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 1261153029">
+<circle id="Ellipse 9" cx="30" cy="30" r="30" fill="#20201F"/>
+<g id="check">
+<mask id="mask0_1272_2116" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="15" y="15" width="30" height="30">
+<rect id="Bounding box" x="15" y="15" width="30" height="30" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1272_2116)">
+<path id="check_2" d="M26.9375 37.5L19.8125 30.375L21.5938 28.5938L26.9375 33.9375L38.4063 22.4688L40.1875 24.25L26.9375 37.5Z" fill="#E9C872"/>
+</g>
+</g>
+</g>
+</svg>

@@ -19,6 +19,26 @@ const config = {
     },
     extend: {
       colors: {
+        "text-grey-1": "#E5E5E5",
+        "text-grey-2": "#8F8F8F",
+        "text-grey-3": "#8F8F8F",
+        "card-grey-1": "#1C1C1A",
+        "background-grey": "#1C1C1A",
+
+        // Yellow
+        "cta-yellow-1": "#FEF2B0",
+        "cta-yellow-2": "#FDE254",
+        "card-yellow": "#FCD400",
+        "tags-yellow": "#B39700",
+
+        // Semantic Colors
+        "red-semantic": "#BF4949",
+        "green-semantic": "#26A246",
+
+        // Gradients
+        "gradient-fill": "#0F0D00",
+        "gradient-stroke": "#151200",
+        "radial-bg": "#151200",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
